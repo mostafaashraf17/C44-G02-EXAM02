@@ -10,9 +10,7 @@ namespace Exam
     {
 
         private int AnswerId { get; set; }
-        private string? AnswerText { get; set; }
-
-        private Answer[] Answers { get; set; }
+        private string? AnswerText { get; set; }   
 
         public Answer(int answerId, string? answerText)
         {

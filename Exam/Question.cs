@@ -8,9 +8,30 @@ namespace Exam
 {
     internal abstract class Question
     {
-        public string? Header { get; set; }
-        public string? Body { get; set; }
-        public int Mark {  get; set; } 
+
+        private string? Header { get; set; }
+        private string? Body { get; set; }
+        private double Mark {  get; set; } 
+
+        public Answer[] Answers { get; set; }
+
+        public Answer RightAnswer { get; set; }
+
+        protected Question(string? header, string? body, double mark)
+        {
+            Header = header;
+            Body = body;
+            Mark = mark;
+        }
+
+        public abstract void DisplayQuestions();
+
+        public override string ToString()
+        {
+            return $"{Header} : {Body} , Mark = {Mark}";
+        }
+        
+
          
       
 

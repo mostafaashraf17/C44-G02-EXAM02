@@ -8,15 +8,9 @@ namespace Exam
 {
     internal class FinalExam : Exam 
     {
-        public FinalExam(int time , int number)
+        public override void ShowExam()
         {
-            Time = time;
-            Number = number;
-        }
-public override void ShowExam()
-        {
-
-            
+            Console.WriteLine($"Question = {Question} ");
         }
     }
 }

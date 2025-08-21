@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Exam
 {
-    internal class PracticalExam : Exam
+    internal class PracticalExam : Exam 
     {
+        public override void ShowExam()
+        {
+            
+        }
     }
 }
