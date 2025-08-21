@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Exam
 { internal class MCQQuestion : Question
     {
-        public MCQQuestion(string? header, string? body, double mark, Answer[] answers, Answer rightAnswer) : base(header, body, mark, answers, rightAnswer)
+        public MCQQuestion(string? header, string? body, int  mark, Answer[] answers, Answer rightAnswer) : base(header, body, mark, answers, rightAnswer)
         {
 
         }

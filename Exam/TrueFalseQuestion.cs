@@ -8,7 +8,7 @@ namespace Exam
 {
     internal class TrueFalseQuestion : Question
     {
-        public TrueFalseQuestion(string? header, string? body, double mark, Answer[] answers, Answer rightAnswer) : base(header, body, mark, answers, rightAnswer)
+        public TrueFalseQuestion(string? header, string? body, int  mark, Answer[] answers, Answer rightAnswer) : base(header, body, mark, answers, rightAnswer)
         {
 
         }
