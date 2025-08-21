@@ -8,23 +8,18 @@ namespace Exam
 {
     internal class TrueFalseQuestion : Question
     {
-        public TrueFalseQuestion(string? header, string? body, int mark , Answer right) : base(header, body, mark)
+        public TrueFalseQuestion(string? header, string? body, double mark, Answer[] answers, Answer rightAnswer) : base(header, body, mark, answers, rightAnswer)
         {
-            Answers = new Answer[]
-            {
-                new Answer  (1 , "true"),
-                new Answer (2 , "false" )
-            };
-            RightAnswer = right;
 
         }
 
         public override void DisplayQuestions()
         {
+            Console.WriteLine("Question True Or False");
             Console.WriteLine(ToString());
-            for(int i = 0; i < Answers.Length; i++)
+            foreach (var ans in Answers)
             {
-                Console.WriteLine(Answers[i]);
+                Console.WriteLine(ans);
             }
             
         }

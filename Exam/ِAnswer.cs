@@ -9,8 +9,8 @@ namespace Exam
     internal class Answer
     {
 
-        private int AnswerId { get; set; }
-        private string? AnswerText { get; set; }   
+        public int AnswerId { get; set; }
+        public string? AnswerText { get; set; }   
 
         public Answer(int answerId, string? answerText)
         {

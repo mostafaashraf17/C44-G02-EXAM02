@@ -9,21 +9,34 @@ namespace Exam
     internal abstract class Question
     {
 
-        private string? Header { get; set; }
-        private string? Body { get; set; }
-        private double Mark {  get; set; } 
+
+
+        public string? Header { get; set; }
+        public string? Body { get; set; }
+        public int Mark {  get; set; } 
 
         public Answer[] Answers { get; set; }
 
         public Answer RightAnswer { get; set; }
 
-        protected Question(string? header, string? body, double mark)
+      
+        protected Question(string? header, string? body, int mark, Answer[] answers, Answer rightAnswer)
         {
             Header = header;
             Body = body;
             Mark = mark;
+            Answers = answers;
+            RightAnswer = rightAnswer;
+        }
+        public Answer[] GetAnswers()
+        {
+            return Answers;
         }
 
+        public bool CheckAnswer(int id)
+        {
+            return id == RightAnswer.AnswerId;
+        }
         public abstract void DisplayQuestions();
 
         public override string ToString()

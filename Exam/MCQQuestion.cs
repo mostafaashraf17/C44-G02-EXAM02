@@ -5,22 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Exam
-{
-    internal class MCQQuestion : Question
+{ internal class MCQQuestion : Question
     {
-        public MCQQuestion(string? header, string? body, int mark, Answer[] answers , Answer right) : base(header, body, mark)
+        public MCQQuestion(string? header, string? body, double mark, Answer[] answers, Answer rightAnswer) : base(header, body, mark, answers, rightAnswer)
         {
-            Answers = answers;
-            RightAnswer = right;
+
         }
 
         public override void DisplayQuestions()
         {
+            Console.WriteLine("Question MCQ");
             Console.WriteLine(ToString());
-            for(int i = 0;  i < Answers.Length; i++)
+          foreach(var ans in Answers)
             {
-                Console.WriteLine(Answers[i]);
+                Console.WriteLine(ans);
             }
         }
     }
+   
 }

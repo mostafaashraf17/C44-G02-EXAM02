@@ -12,11 +12,13 @@ namespace Exam
         public int Time { get; set; }
         public int NumbersOfQuestions {  get; set; }
 
+        public Question[] Questions { get; set; }
 
-        protected Exam(int time, int numbersOfQuestions)
+        protected Exam(int time, int numbersOfQuestions , Question[] questions)
         {
             Time = time;
             NumbersOfQuestions = numbersOfQuestions;
+            Questions = questions;
         }
 
 
