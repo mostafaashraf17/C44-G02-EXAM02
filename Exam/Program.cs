@@ -61,7 +61,7 @@
                 exams = new FinalExam(10 , 1, Exam);
             }
             else
-                exams = new PractialExam(15 , 2 ,Exam);
+                exams = new PracticalExam(15 , 2 ,Exam);
 
             subject.CreateTheExam(exams);
 
