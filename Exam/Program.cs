@@ -3,7 +3,7 @@
     internal class Program
     {
         static void Main(string[] args)
-        {
+        {                                    
             Console.WriteLine("Enter Your Subject Id");
             int subjectid = int.Parse(Console.ReadLine() ?? string.Empty);
 
@@ -29,7 +29,7 @@
                 new Answer (4 , "D"),
             };
 
-            Question Q01 = new MCQQuestion($"Question 01" , "Which Word Starts Char 'A'", 5 ,MCQ01 , MCQ01[1]);
+            Question Q01 = new MCQQuestion($"Question 01" , "Which Word Starts Char 'A'", 5 ,MCQ01 , MCQ01[0]);
 
             Answer[] MCQ02 = new Answer[]
             {
@@ -40,7 +40,7 @@
 
             };
 
-            Question Q02 = new MCQQuestion("Question 02", "Which Word Starts Cahr 'H'", 5, MCQ02, MCQ02[4]);
+            Question Q02 = new MCQQuestion("Question 02", "Which Word Starts Cahr 'H'", 5, MCQ02, MCQ02[3]);
 
 
             Answer[] TrueOrFalse = new Answer[]
@@ -50,7 +50,7 @@
             };
 
 
-            Question Q03 = new TrueFalseQuestion("Question 3 ", "Is A Question Number Q01 = B", 1, TrueOrFalse, TrueOrFalse[2]);
+            Question Q03 = new TrueFalseQuestion("Question 3 ", "Is A Question Number Q01 = B", 1, TrueOrFalse, TrueOrFalse[1]);
 
             Question[] Exam = new Question[] {Q01  , Q02 , Q03};
 
@@ -64,9 +64,11 @@
                 exams = new PracticalExam(15 , 2 ,Exam);
 
             subject.CreateTheExam(exams);
+            Console.WriteLine(exams);
 
             Console.WriteLine(SubjectName);
 
+            Console.WriteLine(subject.ToString());
          
             
 
